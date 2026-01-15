@@ -1,0 +1,59 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#login {
+  background-color: #242424;
+  margin: 0 auto;
+  padding: 10px;;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  label {
+    color: white;
+    font-weight: bold;
+  }
+
+  #game {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;  
+  }
+
+  button {
+    width: 150px;
+    height: 30px;
+    border: none;
+  }
+
+  button:enabled {
+    cursor: pointer;
+  }
+
+  #play {
+    background-color: rgb(60, 255, 60);
+    width: 100%;
+  }
+
+  #host {
+    background-color: rgb(255, 60, 60);
+    width: 100%;
+  }
+
+  #make {
+    background-color: rgb(60, 60, 255);
+    width: 100%
+  }
+}
