@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect, ReactNode, Dispatch, SetStateAction} from "react";
 import socket from "../socket.ts";
-import { useNavigate } from "react-router-dom";
 
 export type PlayerRole = "HOST" | "PLAY";
 
@@ -57,7 +56,7 @@ export function GameProvider({children}: {children: ReactNode}) {
             setGame(state);
         });
 
-        socket.on("game-end", (state: GameState) => {
+        socket.on("game-end", () => {
             setGame(null);
             setPlayer(null);
         });
