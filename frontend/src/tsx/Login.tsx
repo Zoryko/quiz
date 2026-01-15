@@ -41,7 +41,7 @@ function Login() {
 
   return (
     <>
-      <h1>Le projet secret</h1>
+      <h1>Le quiz des copains</h1>
       <div id="login">
         <div>
           <label htmlFor='pseudo'>Pseudo : </label>
