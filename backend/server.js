@@ -2,6 +2,7 @@ const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
+const PORT = process.env.PORT || 8000;
 
 const socketHandlers = require("./socket/socketHandlers");
 
@@ -12,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173",
+        origin: "http://quiz-des-copains.netlify.app",
         methods: ["GET", "POST"]
     },
     pingInterval: 25000,
@@ -21,6 +22,7 @@ const io = new Server(server, {
 
 socketHandlers(io);
 
-server.listen(3001, () => {
-    console.log("Backend lancé sur http://localhost:3001");
+server.listen(PORT, () => {
+    console.log("Backend lancé sur http://wrong-siana-alexp71eperso-8e0806a8.koyeb.app/");
+
 });
