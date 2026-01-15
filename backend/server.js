@@ -13,8 +13,9 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "https://quiz-des-copains.netlify.app",
-        methods: ["GET", "POST"]
+        origin: ["https://quiz-des-copains.netlify.app", "https://www.quiz-des-copains.netlify.app"],
+        methods: ["GET", "POST"],
+        credentials: true
     },
     pingInterval: 25000,
     pingTimeout: 2100000
