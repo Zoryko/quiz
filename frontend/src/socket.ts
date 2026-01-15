@@ -1,7 +1,8 @@
 import { io, Socket } from "socket.io-client";
 
-const socket: Socket = io("http://wrong-siana-alexp71eperso-8e0806a8.koyeb.app/", {
-    autoConnect: false
+const socket: Socket = io(process.env.REACT_APP_API_URL, {
+    autoConnect: false,
+    transports: ['websocket']
 });
 
 export default socket;
