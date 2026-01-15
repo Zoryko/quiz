@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "http://quiz-des-copains.netlify.app",
+        origin: "https://quiz-des-copains.netlify.app",
         methods: ["GET", "POST"]
     },
     pingInterval: 25000,
@@ -23,6 +23,6 @@ const io = new Server(server, {
 socketHandlers(io);
 
 server.listen(PORT, () => {
-    console.log("Backend lancé sur http://wrong-siana-alexp71eperso-8e0806a8.koyeb.app/");
+    console.log("Backend lancé sur http://wrong-siana-alexp71eperso-8e0806a8.koyeb.app/ avec le port ", PORT);
 
 });
