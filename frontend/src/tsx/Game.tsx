@@ -57,6 +57,7 @@ function Game() {
         const reader = new FileReader();
         reader.onload = () => {
             const grid = JSON.parse(reader.result as string);
+            console.log("Grille importée :", grid);
             socket.emit("import-grid", grid);
         };
         reader.readAsText(file);
