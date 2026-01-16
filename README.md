@@ -7,6 +7,6 @@ Lancer backend avec ```node server.js```
 ===========================================
 
 Frontend --> src/socket.ts\
-Ligne 3 --> Remplacer ```import.meta.env.VITE_API_URL as string``` par ```http://localhost:3001```
+Ligne 3 --> Remplacer ```import.meta.env.VITE_API_URL as string``` par ```"http://localhost:3001"```
 
 Lancer frontend avec ```npm run dev```
